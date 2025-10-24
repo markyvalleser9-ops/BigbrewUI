@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BIGBREW - Welcome</title>
+    <link rel="stylesheet" href="../css/landing.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="landing-container">
+        <div class="content-wrapper">
+            <div class="logo-container">
+                <div class="logo-placeholder">
+                    <img src="logo.png" alt="BIGBREW Logo" class="logo-image">
+                </div>
+            </div>
+            
+            <h1 class="brand-name">BIGBREW</h1>
+            <p class="tagline">Big in taste. Bit in price</p>
+            
+            <button class="start-btn" id="startBtn">
+                <span>Start Now</span>
+                <i class="fas fa-arrow-right"></i>
+            </button>
+        </div>
+        
+        <!-- Decorative elements -->
+        <div class="floating-coffee coffee-1">
+            <i class="fas fa-coffee"></i>
+        </div>
+        <div class="floating-coffee coffee-2">
+            <i class="fas fa-coffee"></i>
+        </div>
+        <div class="floating-coffee coffee-3">
+            <i class="fas fa-coffee"></i>
+        </div>
+    </div>
+
+    <!-- Loading overlay (initially hidden) -->
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loading-spinner">
+            <i class="fas fa-spinner fa-spin"></i>
+            <p>Loading...</p>
+        </div>
+    </div>
+
+    <script src="../js/landing.js"></script>
+</body>
+</html>

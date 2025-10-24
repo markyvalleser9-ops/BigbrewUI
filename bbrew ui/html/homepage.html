@@ -1,0 +1,1228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BIGBREW - Menu</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/homepage.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Left Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo-container">
+                    <div class="logo-placeholder">
+                        <img src="logo.png" alt="BIGBREW Logo" class="logo-image">
+                    </div>
+                    <h1 class="brand-name">BIGBREW</h1>
+                </div>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <a href="#" class="nav-item active" data-page="menu">
+                    <i class="fas fa-mug-hot"></i>
+                    <span>Menu</span>
+                </a>
+                <a href="#" class="nav-item" data-page="order-history">
+                    <i class="fas fa-history"></i>
+                    <span>Order History</span>
+                </a>
+                <a href="#" class="nav-item" data-page="inventory">
+                    <i class="fas fa-boxes"></i>
+                    <span>Inventory</span>
+                </a>
+            </nav>
+            
+            <div class="sidebar-footer">
+                <a href="#" class="nav-item logout-btn" id="logoutBtn">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>Logout</span>
+                </a>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <div class="main-content">
+            <!-- Category Tabs -->
+            <div class="category-tabs">
+                <button class="tab-btn active" data-category="milktea">🥤 Milk Tea</button>
+                <button class="tab-btn" data-category="coffee">☕ Coffee</button>
+                <button class="tab-btn" data-category="fruit-tea">🍓 Fruit Tea</button>
+                <button class="tab-btn" data-category="brosty">❄️ Brosty</button>
+                <button class="tab-btn" data-category="praf">🍧 Praf</button>
+                <button class="tab-btn" data-category="add-ons">➕ Add-ons</button>
+            </div>
+
+            <!-- Menu Content Area -->
+            <div class="content-area">
+                <!-- Milk Tea Section -->
+                <div class="menu-content active" id="milktea">
+                    <div class="category-header milktea-header">
+                        <div class="header-content">
+                            <h2 class="content-title">🥤 Milk Tea</h2>
+                            <div class="price-info">₱29 / ₱39</div>
+                        </div>
+                    </div>
+                    <div class="menu-items">
+                        <div class="menu-item" data-name="Dark Choco" data-price-medio="29" data-price-grande="39">
+                            <div class="item-info">
+                                <span class="item-emoji">🥤</span>
+                                <span class="item-name">Dark Choco</span>
+                            </div>
+                            <div class="item-actions">
+                                <button class="add-to-cart" data-size="medio">Medio</button>
+                                <button class="add-to-cart" data-size="grande">Grande</button>
+                            </div>
+                        </div>
+                        <div class="menu-item" data-name="Cookies & Cream" data-price-medio="29" data-price-grande="39">
+                            <div class="item-info">
+                                <span class="item-emoji">🥤</span>
+                                <span class="item-name">Cookies & Cream</span>
+                            </div>
+                            <div class="item-actions">
+                                <button class="add-to-cart" data-size="medio">Medio</button>
+                                <button class="add-to-cart" data-size="grande">Grande</button>
+                            </div>
+                        </div>
+                        <div class="menu-item" data-name="Okinawa" data-price-medio="29" data-price-grande="39">
+                            <div class="item-info">
+                                <span class="item-emoji">🥤</span>
+                                <span class="item-name">Okinawa</span>
+                            </div>
+                            <div class="item-actions">
+                                <button class="add-to-cart" data-size="medio">Medio</button>
+                                <button class="add-to-cart" data-size="grande">Grande</button>
+                            </div>
+                        </div>
+                        <div class="menu-item" data-name="Wintermelon" data-price-medio="29" data-price-grande="39">
+                            <div class="item-info">
+                                <span class="item-emoji">🥤</span>
+                                <span class="item-name">Wintermelon</span>
+                            </div>
+                            <div class="item-actions">
+                                <button class="add-to-cart" data-size="medio">Medio</button>
+                                <button class="add-to-cart" data-size="grande">Grande</button>
+                            </div>
+                        </div>
+                        <div class="menu-item" data-name="Cheesecake" data-price-medio="29" data-price-grande="39">
+                            <div class="item-info">
+                                <span class="item-emoji">🥤</span>
+                                <span class="item-name">Cheesecake</span>
+                            </div>
+                            <div class="item-actions">
+                                <button class="add-to-cart" data-size="medio">Medio</button>
+                                <button class="add-to-cart" data-size="grande">Grande</button>
+                            </div>
+                        </div>
+                        <div class="menu-item" data-name="Matcha" data-price-medio="29" data-price-grande="39">
+                            <div class="item-info">
+                                <span class="item-emoji">🥤</span>
+                                <span class="item-name">Matcha</span>
+                            </div>
+                            <div class="item-actions">
+                                <button class="add-to-cart" data-size="medio">Medio</button>
+                                <button class="add-to-cart" data-size="grande">Grande</button>
+                            </div>
+                        </div>
+                        <div class="menu-item" data-name="Chocolate" data-price-medio="29" data-price-grande="39">
+                            <div class="item-info">
+                                <span class="item-emoji">🥤</span>
+                                <span class="item-name">Chocolate</span>
+                            </div>
+                            <div class="item-actions">
+                                <button class="add-to-cart" data-size="medio">Medio</button>
+                                <button class="add-to-cart" data-size="grande">Grande</button>
+                            </div>
+                        </div>
+                        <div class="menu-item" data-name="Red Velvet" data-price-medio="29" data-price-grande="39">
+                            <div class="item-info">
+                                <span class="item-emoji">🥤</span>
+                                <span class="item-name">Red Velvet</span>
+                            </div>
+                            <div class="item-actions">
+                                <button class="add-to-cart" data-size="medio">Medio</button>
+                                <button class="add-to-cart" data-size="grande">Grande</button>
+                            </div>
+                        </div>
+                        <div class="menu-item" data-name="Salted Caramel" data-price-medio="29" data-price-grande="39">
+                            <div class="item-info">
+                                <span class="item-emoji">🥤</span>
+                                <span class="item-name">Salted Caramel</span>
+                            </div>
+                            <div class="item-actions">
+                                <button class="add-to-cart" data-size="medio">Medio</button>
+                                <button class="add-to-cart" data-size="grande">Grande</button>
+                            </div>
+                        </div>
+                        <div class="menu-item" data-name="Choco Kisses" data-price-medio="29" data-price-grande="39">
+                            <div class="item-info">
+                                <span class="item-emoji">🥤</span>
+                                <span class="item-name">Choco Kisses</span>
+                            </div>
+                            <div class="item-actions">
+                                <button class="add-to-cart" data-size="medio">Medio</button>
+                                <button class="add-to-cart" data-size="grande">Grande</button>
+                            </div>
+                        </div>
+                        <div class="menu-item" data-name="Taro" data-price-medio="29" data-price-grande="39">
+                            <div class="item-info">
+                                <span class="item-emoji">🥤</span>
+                                <span class="item-name">Taro</span>
+                            </div>
+                            <div class="item-actions">
+                                <button class="add-to-cart" data-size="medio">Medio</button>
+                                <button class="add-to-cart" data-size="grande">Grande</button>
+                            </div>
+                        </div>
+                        <div class="menu-item" data-name="Strawberry" data-price-medio="29" data-price-grande="39">
+                            <div class="item-info">
+                                <span class="item-emoji">🥤</span>
+                                <span class="item-name">Strawberry</span>
+                            </div>
+                            <div class="item-actions">
+                                <button class="add-to-cart" data-size="medio">Medio</button>
+                                <button class="add-to-cart" data-size="grande">Grande</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Coffee Section -->
+                <div class="menu-content" id="coffee">
+                    <div class="category-header coffee-header">
+                        <div class="header-content">
+                            <h2 class="content-title">☕ Coffee</h2>
+                            <div class="price-info">Iced: ₱29 / ₱39 | Hot: ₱39</div>
+                        </div>
+                    </div>
+                    <div class="menu-items">
+                        <div class="menu-item" data-name="Brusko" data-price-medio="29" data-price-grande="39" data-price-hot="39">
+                            <div class="item-info">
+                                <span class="item-emoji">☕</span>
+                                <span class="item-name">Brusko</span>
+                            </div>
+                            <div class="item-actions">
+                                <button class="add-to-cart" data-size="medio">Iced Medio</button>
+                                <button class="add-to-cart" data-size="grande">Iced Grande</button>
+                                <button class="add-to-cart" data-size="hot">Hot</button>
+                            </div>
+                        </div>
+                        <div class="menu-item" data-name="Mocha" data-price-medio="29" data-price-grande="39" data-price-hot="39">
+                            <div class="item-info">
+                                <span class="item-emoji">☕</span>
+                                <span class="item-name">Mocha</span>
+                            </div>
+                            <div class="item-actions">
+                                <button class="add-to-cart" data-size="medio">Iced Medio</button>
+                                <button class="add-to-cart" data-size="grande">Iced Grande</button>
+                                <button class="add-to-cart" data-size="hot">Hot</button>
+                            </div>
+                        </div>
+                        <div class="menu-item" data-name="Macchiato" data-price-medio="29" data-price-grande="39" data-price-hot="39">
+                            <div class="item-info">
+                                <span class="item-emoji">☕</span>
+                                <span class="item-name">Macchiato</span>
+                            </div>
+                            <div class="item-actions">
+                                <button class="add-to-cart" data-size="medio">Iced Medio</button>
+                                <button class="add-to-cart" data-size="grande">Iced Grande</button>
+                                <button class="add-to-cart" data-size="hot">Hot</button>
+                            </div>
+                        </div>
+                        <div class="menu-item" data-name="Vanilla" data-price-medio="29" data-price-grande="39" data-price-hot="39">
+                            <div class="item-info">
+                                <span class="item-emoji">☕</span>
+                                <span class="item-name">Vanilla</span>
+                            </div>
+                            <div class="item-actions">
+                                <button class="add-to-cart" data-size="medio">Iced Medio</button>
+                                <button class="add-to-cart" data-size="grande">Iced Grande</button>
+                                <button class="add-to-cart" data-size="hot">Hot</button>
+                            </div>
+                        </div>
+                        <div class="menu-item" data-name="Caramel" data-price-medio="29" data-price-grande="39" data-price-hot="39">
+                            <div class="item-info">
+                                <span class="item-emoji">☕</span>
+                                <span class="item-name">Caramel</span>
+                            </div>
+                            <div class="item-actions">
+                                <button class="add-to-cart" data-size="medio">Iced Medio</button>
+                                <button class="add-to-cart" data-size="grande">Iced Grande</button>
+                                <button class="add-to-cart" data-size="hot">Hot</button>
+                            </div>
+                        </div>
+                        <div class="menu-item" data-name="Matcha" data-price-medio="29" data-price-grande="39" data-price-hot="39">
+                            <div class="item-info">
+                                <span class="item-emoji">☕</span>
+                                <span class="item-name">Matcha</span>
+                            </div>
+                            <div class="item-actions">
+                                <button class="add-to-cart" data-size="medio">Iced Medio</button>
+                                <button class="add-to-cart" data-size="grande">Iced Grande</button>
+                                <button class="add-to-cart" data-size="hot">Hot</button>
+                            </div>
+                        </div>
+                        <div class="menu-item" data-name="Fudge" data-price-medio="29" data-price-grande="39" data-price-hot="39">
+                            <div class="item-info">
+                                <span class="item-emoji">☕</span>
+                                <span class="item-name">Fudge</span>
+                            </div>
+                            <div class="item-actions">
+                                <button class="add-to-cart" data-size="medio">Iced Medio</button>
+                                <button class="add-to-cart" data-size="grande">Iced Grande</button>
+                                <button class="add-to-cart" data-size="hot">Hot</button>
+                            </div>
+                        </div>
+                        <div class="menu-item" data-name="Spanish Latte" data-price-medio="29" data-price-grande="39" data-price-hot="39">
+                            <div class="item-info">
+                                <span class="item-emoji">☕</span>
+                                <span class="item-name">Spanish Latte</span>
+                            </div>
+                            <div class="item-actions">
+                                <button class="add-to-cart" data-size="medio">Iced Medio</button>
+                                <button class="add-to-cart" data-size="grande">Iced Grande</button>
+                                <button class="add-to-cart" data-size="hot">Hot</button>
+                            </div>
+                        </div>
+                        <div class="menu-note">Extra Shot: ₱5</div>
+                    </div>
+                </div>
+
+                <!-- Fruit Tea Section -->
+                <div class="menu-content" id="fruit-tea">
+                    <div class="category-header fruit-tea-header">
+                        <div class="header-content">
+                            <h2 class="content-title">🍓 Fruit Tea</h2>
+                            <div class="price-info">₱29 / ₱39</div>
+                        </div>
+                    </div>
+                    <div class="menu-items">
+                        <div class="menu-item" data-name="Lychee" data-price-medio="29" data-price-grande="39">
+                            <div class="item-info">
+                                <span class="item-emoji">🍓</span>
+                                <span class="item-name">Lychee</span>
+                            </div>
+                            <div class="item-actions">
+                                <button class="add-to-cart" data-size="medio">Medio</button>
+                                <button class="add-to-cart" data-size="grande">Grande</button>
+                            </div>
+                        </div>
+                        <div class="menu-item" data-name="Green Apple" data-price-medio="29" data-price-grande="39">
+                            <div class="item-info">
+                                <span class="item-emoji">🍓</span>
+                                <span class="item-name">Green Apple</span>
+                            </div>
+                            <div class="item-actions">
+                                <button class="add-to-cart" data-size="medio">Medio</button>
+                                <button class="add-to-cart" data-size="grande">Grande</button>
+                            </div>
+                        </div>
+                        <div class="menu-item" data-name="Blueberry" data-price-medio="29" data-price-grande="39">
+                            <div class="item-info">
+                                <span class="item-emoji">🍓</span>
+                                <span class="item-name">Blueberry</span>
+                            </div>
+                            <div class="item-actions">
+                                <button class="add-to-cart" data-size="medio">Medio</button>
+                                <button class="add-to-cart" data-size="grande">Grande</button>
+                            </div>
+                        </div>
+                        <div class="menu-item" data-name="Lemon" data-price-medio="29" data-price-grande="39">
+                            <div class="item-info">
+                                <span class="item-emoji">🍓</span>
+                                <span class="item-name">Lemon</span>
+                            </div>
+                            <div class="item-actions">
+                                <button class="add-to-cart" data-size="medio">Medio</button>
+                                <button class="add-to-cart" data-size="grande">Grande</button>
+                            </div>
+                        </div>
+                        <div class="menu-item" data-name="Strawberry" data-price-medio="29" data-price-grande="39">
+                            <div class="item-info">
+                                <span class="item-emoji">🍓</span>
+                                <span class="item-name">Strawberry</span>
+                            </div>
+                            <div class="item-actions">
+                                <button class="add-to-cart" data-size="medio">Medio</button>
+                                <button class="add-to-cart" data-size="grande">Grande</button>
+                            </div>
+                        </div>
+                        <div class="menu-item" data-name="Kiwi" data-price-medio="29" data-price-grande="39">
+                            <div class="item-info">
+                                <span class="item-emoji">🍓</span>
+                                <span class="item-name">Kiwi</span>
+                            </div>
+                            <div class="item-actions">
+                                <button class="add-to-cart" data-size="medio">Medio</button>
+                                <button class="add-to-cart" data-size="grande">Grande</button>
+                            </div>
+                        </div>
+                        <div class="menu-item" data-name="Mango" data-price-medio="29" data-price-grande="39">
+                            <div class="item-info">
+                                <span class="item-emoji">🍓</span>
+                                <span class="item-name">Mango</span>
+                            </div>
+                            <div class="item-actions">
+                                <button class="add-to-cart" data-size="medio">Medio</button>
+                                <button class="add-to-cart" data-size="grande">Grande</button>
+                            </div>
+                        </div>
+                        <div class="menu-item" data-name="Honey Peach" data-price-medio="29" data-price-grande="39">
+                            <div class="item-info">
+                                <span class="item-emoji">🍓</span>
+                                <span class="item-name">Honey Peach</span>
+                            </div>
+                            <div class="item-actions">
+                                <button class="add-to-cart" data-size="medio">Medio</button>
+                                <button class="add-to-cart" data-size="grande">Grande</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Brosty Section -->
+                <div class="menu-content" id="brosty">
+                    <div class="category-header brosty-header">
+                        <div class="header-content">
+                            <h2 class="content-title">❄️ Brosty</h2>
+                            <div class="price-info">₱49 / ₱59</div>
+                        </div>
+                    </div>
+                    <div class="menu-items">
+                        <div class="menu-item" data-name="Lychee" data-price-medio="49" data-price-grande="59">
+                            <div class="item-info">
+                                <span class="item-emoji">❄️</span>
+                                <span class="item-name">Lychee</span>
+                            </div>
+                            <div class="item-actions">
+                                <button class="add-to-cart" data-size="medio">Medio</button>
+                                <button class="add-to-cart" data-size="grande">Grande</button>
+                            </div>
+                        </div>
+                        <div class="menu-item" data-name="Green Apple" data-price-medio="49" data-price-grande="59">
+                            <div class="item-info">
+                                <span class="item-emoji">❄️</span>
+                                <span class="item-name">Green Apple</span>
+                            </div>
+                            <div class="item-actions">
+                                <button class="add-to-cart" data-size="medio">Medio</button>
+                                <button class="add-to-cart" data-size="grande">Grande</button>
+                            </div>
+                        </div>
+                        <div class="menu-item" data-name="Blueberry" data-price-medio="49" data-price-grande="59">
+                            <div class="item-info">
+                                <span class="item-emoji">❄️</span>
+                                <span class="item-name">Blueberry</span>
+                            </div>
+                            <div class="item-actions">
+                                <button class="add-to-cart" data-size="medio">Medio</button>
+                                <button class="add-to-cart" data-size="grande">Grande</button>
+                            </div>
+                        </div>
+                        <div class="menu-item" data-name="Lemon" data-price-medio="49" data-price-grande="59">
+                            <div class="item-info">
+                                <span class="item-emoji">❄️</span>
+                                <span class="item-name">Lemon</span>
+                            </div>
+                            <div class="item-actions">
+                                <button class="add-to-cart" data-size="medio">Medio</button>
+                                <button class="add-to-cart" data-size="grande">Grande</button>
+                            </div>
+                        </div>
+                        <div class="menu-item" data-name="Strawberry" data-price-medio="49" data-price-grande="59">
+                            <div class="item-info">
+                                <span class="item-emoji">❄️</span>
+                                <span class="item-name">Strawberry</span>
+                            </div>
+                            <div class="item-actions">
+                                <button class="add-to-cart" data-size="medio">Medio</button>
+                                <button class="add-to-cart" data-size="grande">Grande</button>
+                            </div>
+                        </div>
+                        <div class="menu-item" data-name="Kiwi" data-price-medio="49" data-price-grande="59">
+                            <div class="item-info">
+                                <span class="item-emoji">❄️</span>
+                                <span class="item-name">Kiwi</span>
+                            </div>
+                            <div class="item-actions">
+                                <button class="add-to-cart" data-size="medio">Medio</button>
+                                <button class="add-to-cart" data-size="grande">Grande</button>
+                            </div>
+                        </div>
+                        <div class="menu-item" data-name="Mango" data-price-medio="49" data-price-grande="59">
+                            <div class="item-info">
+                                <span class="item-emoji">❄️</span>
+                                <span class="item-name">Mango</span>
+                            </div>
+                            <div class="item-actions">
+                                <button class="add-to-cart" data-size="medio">Medio</button>
+                                <button class="add-to-cart" data-size="grande">Grande</button>
+                            </div>
+                        </div>
+                        <div class="menu-item" data-name="Honey Peach" data-price-medio="49" data-price-grande="59">
+                            <div class="item-info">
+                                <span class="item-emoji">❄️</span>
+                                <span class="item-name">Honey Peach</span>
+                            </div>
+                            <div class="item-actions">
+                                <button class="add-to-cart" data-size="medio">Medio</button>
+                                <button class="add-to-cart" data-size="grande">Grande</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Praf Section -->
+                <div class="menu-content" id="praf">
+                    <div class="category-header praf-header">
+                        <div class="header-content">
+                            <h2 class="content-title">🍧 Praf</h2>
+                            <div class="price-info">₱49 / ₱59</div>
+                        </div>
+                    </div>
+                    <div class="menu-items">
+                        <div class="menu-item" data-name="Coffee Jelly" data-price-medio="49" data-price-grande="59">
+                            <div class="item-info">
+                                <span class="item-emoji">🍧</span>
+                                <span class="item-name">Coffee Jelly</span>
+                            </div>
+                            <div class="item-actions">
+                                <button class="add-to-cart" data-size="medio">Medio</button>
+                                <button class="add-to-cart" data-size="grande">Grande</button>
+                            </div>
+                        </div>
+                        <div class="menu-item" data-name="Caramel Macchiato" data-price-medio="49" data-price-grande="59">
+                            <div class="item-info">
+                                <span class="item-emoji">🍧</span>
+                                <span class="item-name">Caramel Macchiato</span>
+                            </div>
+                            <div class="item-actions">
+                                <button class="add-to-cart" data-size="medio">Medio</button>
+                                <button class="add-to-cart" data-size="grande">Grande</button>
+                            </div>
+                        </div>
+                        <div class="menu-item" data-name="Mocha" data-price-medio="49" data-price-grande="59">
+                            <div class="item-info">
+                                <span class="item-emoji">🍧</span>
+                                <span class="item-name">Mocha</span>
+                            </div>
+                            <div class="item-actions">
+                                <button class="add-to-cart" data-size="medio">Medio</button>
+                                <button class="add-to-cart" data-size="grande">Grande</button>
+                            </div>
+                        </div>
+                        <div class="menu-item" data-name="Vanilla Coffee" data-price-medio="49" data-price-grande="59">
+                            <div class="item-info">
+                                <span class="item-emoji">🍧</span>
+                                <span class="item-name">Vanilla Coffee</span>
+                            </div>
+                            <div class="item-actions">
+                                <button class="add-to-cart" data-size="medio">Medio</button>
+                                <button class="add-to-cart" data-size="grande">Grande</button>
+                            </div>
+                        </div>
+                        <div class="menu-item" data-name="Java Chip" data-price-medio="49" data-price-grande="59">
+                            <div class="item-info">
+                                <span class="item-emoji">🍧</span>
+                                <span class="item-name">Java Chip</span>
+                            </div>
+                            <div class="item-actions">
+                                <button class="add-to-cart" data-size="medio">Medio</button>
+                                <button class="add-to-cart" data-size="grande">Grande</button>
+                            </div>
+                        </div>
+                        <div class="menu-item" data-name="Cheesecake" data-price-medio="49" data-price-grande="59">
+                            <div class="item-info">
+                                <span class="item-emoji">🍧</span>
+                                <span class="item-name">Cheesecake</span>
+                            </div>
+                            <div class="item-actions">
+                                <button class="add-to-cart" data-size="medio">Medio</button>
+                                <button class="add-to-cart" data-size="grande">Grande</button>
+                            </div>
+                        </div>
+                        <div class="menu-item" data-name="Cookies & Cream" data-price-medio="49" data-price-grande="59">
+                            <div class="item-info">
+                                <span class="item-emoji">🍧</span>
+                                <span class="item-name">Cookies & Cream</span>
+                            </div>
+                            <div class="item-actions">
+                                <button class="add-to-cart" data-size="medio">Medio</button>
+                                <button class="add-to-cart" data-size="grande">Grande</button>
+                            </div>
+                        </div>
+                        <div class="menu-item" data-name="Creamy Avocado" data-price-medio="49" data-price-grande="59">
+                            <div class="item-info">
+                                <span class="item-emoji">🍧</span>
+                                <span class="item-name">Creamy Avocado</span>
+                            </div>
+                            <div class="item-actions">
+                                <button class="add-to-cart" data-size="medio">Medio</button>
+                                <button class="add-to-cart" data-size="grande">Grande</button>
+                            </div>
+                        </div>
+                        <div class="menu-item" data-name="Chocolate" data-price-medio="49" data-price-grande="59">
+                            <div class="item-info">
+                                <span class="item-emoji">🍧</span>
+                                <span class="item-name">Chocolate</span>
+                            </div>
+                            <div class="item-actions">
+                                <button class="add-to-cart" data-size="medio">Medio</button>
+                                <button class="add-to-cart" data-size="grande">Grande</button>
+                            </div>
+                        </div>
+                        <div class="menu-item" data-name="Matcha" data-price-medio="49" data-price-grande="59">
+                            <div class="item-info">
+                                <span class="item-emoji">🍧</span>
+                                <span class="item-name">Matcha</span>
+                            </div>
+                            <div class="item-actions">
+                                <button class="add-to-cart" data-size="medio">Medio</button>
+                                <button class="add-to-cart" data-size="grande">Grande</button>
+                            </div>
+                        </div>
+                        <div class="menu-item" data-name="Strawberry" data-price-medio="49" data-price-grande="59">
+                            <div class="item-info">
+                                <span class="item-emoji">🍧</span>
+                                <span class="item-name">Strawberry</span>
+                            </div>
+                            <div class="item-actions">
+                                <button class="add-to-cart" data-size="medio">Medio</button>
+                                <button class="add-to-cart" data-size="grande">Grande</button>
+                            </div>
+                        </div>
+                        <div class="menu-item" data-name="Taro" data-price-medio="49" data-price-grande="59">
+                            <div class="item-info">
+                                <span class="item-emoji">🍧</span>
+                                <span class="item-name">Taro</span>
+                            </div>
+                            <div class="item-actions">
+                                <button class="add-to-cart" data-size="medio">Medio</button>
+                                <button class="add-to-cart" data-size="grande">Grande</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Add-ons Section -->
+                <div class="menu-content" id="add-ons">
+                    <div class="category-header add-ons-header">
+                        <div class="header-content">
+                            <h2 class="content-title">➕ Add-ons</h2>
+                            <div class="price-info">₱9 each</div>
+                        </div>
+                    </div>
+                    <div class="menu-items">
+                        <div class="menu-item" data-name="Pearl" data-price="9">
+                            <div class="item-info">
+                                <span class="item-emoji">➕</span>
+                                <span class="item-name">Pearl</span>
+                            </div>
+                            <div class="item-actions">
+                                <button class="add-to-cart" data-size="regular">Add</button>
+                            </div>
+                        </div>
+                        <div class="menu-item" data-name="Crystal" data-price="9">
+                            <div class="item-info">
+                                <span class="item-emoji">➕</span>
+                                <span class="item-name">Crystal</span>
+                            </div>
+                            <div class="item-actions">
+                                <button class="add-to-cart" data-size="regular">Add</button>
+                            </div>
+                        </div>
+                        <div class="menu-item" data-name="Cream Cheese" data-price="9">
+                            <div class="item-info">
+                                <span class="item-emoji">➕</span>
+                                <span class="item-name">Cream Cheese</span>
+                            </div>
+                            <div class="item-actions">
+                                <button class="add-to-cart" data-size="regular">Add</button>
+                            </div>
+                        </div>
+                        <div class="menu-item" data-name="Cream Puff" data-price="9">
+                            <div class="item-info">
+                                <span class="item-emoji">➕</span>
+                                <span class="item-name">Cream Puff</span>
+                            </div>
+                            <div class="item-actions">
+                                <button class="add-to-cart" data-size="regular">Add</button>
+                            </div>
+                        </div>
+                        <div class="menu-item" data-name="Cheesecake" data-price="9">
+                            <div class="item-info">
+                                <span class="item-emoji">➕</span>
+                                <span class="item-name">Cheesecake</span>
+                            </div>
+                            <div class="item-actions">
+                                <button class="add-to-cart" data-size="regular">Add</button>
+                            </div>
+                        </div>
+                        <div class="menu-item" data-name="Crushed Oreo" data-price="9">
+                            <div class="item-info">
+                                <span class="item-emoji">➕</span>
+                                <span class="item-name">Crushed Oreo</span>
+                            </div>
+                            <div class="item-actions">
+                                <button class="add-to-cart" data-size="regular">Add</button>
+                            </div>
+                        </div>
+                        <div class="menu-item" data-name="Coffee Jelly" data-price="9">
+                            <div class="item-info">
+                                <span class="item-emoji">➕</span>
+                                <span class="item-name">Coffee Jelly</span>
+                            </div>
+                            <div class="item-actions">
+                                <button class="add-to-cart" data-size="regular">Add</button>
+                            </div>
+                        </div>
+                        <div class="menu-item" data-name="Whipped Cream" data-price="9">
+                            <div class="item-info">
+                                <span class="item-emoji">➕</span>
+                                <span class="item-name">Whipped Cream</span>
+                            </div>
+                            <div class="item-actions">
+                                <button class="add-to-cart" data-size="regular">Add</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Order History Section -->
+                <div class="page-content" id="order-history">
+                    <h2 class="content-title">Order History</h2>
+                    <div class="history-container">
+                        <div class="history-filters">
+                            <div class="filter-group">
+                                <label for="dateFilter">Filter by Date:</label>
+                                <input type="date" id="dateFilter" class="date-input">
+                            </div>
+                            <div class="filter-group">
+                                <label for="orderIdSearch">Search Order ID:</label>
+                                <input type="text" id="orderIdSearch" class="order-id-input" placeholder="Enter Order ID">
+                            </div>
+                            <button class="filter-btn" id="filterBtn">Apply Date Filter</button>
+                            <button class="filter-btn" id="searchOrderIdBtn">Search ID</button>
+                            <button class="filter-btn" id="clearFilterBtn">Clear All</button>
+                            <button class="filter-btn" id="downloadPdfBtn">Download PDF</button>
+                        </div>
+                        <div class="history-list" id="historyList">
+                            <!-- Order history items will be populated here -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Inventory Section -->
+                <div class="page-content" id="inventory">
+                    <h2 class="content-title">Inventory</h2>
+                    <div class="inventory-container">
+                        <div class="inventory-section">
+                            <h3 class="section-title">Powders</h3>
+                            <div class="inventory-grid">
+                                <div class="inventory-item">
+                                    <div class="item-info">
+                                        <span class="item-name">Dark Choco</span>
+                                        <span class="item-category">Milk Tea</span>
+                                    </div>
+                                    <div class="item-stock">
+                                        <span class="stock-count">20</span>
+                                        <span class="stock-unit">pcs</span>
+                                    </div>
+                                </div>
+                                <div class="inventory-item">
+                                    <div class="item-info">
+                                        <span class="item-name">Cookies & Cream</span>
+                                        <span class="item-category">Milk Tea</span>
+                                    </div>
+                                    <div class="item-stock">
+                                        <span class="stock-count">20</span>
+                                        <span class="stock-unit">pcs</span>
+                                    </div>
+                                </div>
+                                <div class="inventory-item">
+                                    <div class="item-info">
+                                        <span class="item-name">Okinawa</span>
+                                        <span class="item-category">Milk Tea</span>
+                                    </div>
+                                    <div class="item-stock">
+                                        <span class="stock-count">20</span>
+                                        <span class="stock-unit">pcs</span>
+                                    </div>
+                                </div>
+                                <div class="inventory-item">
+                                    <div class="item-info">
+                                        <span class="item-name">Wintermelon</span>
+                                        <span class="item-category">Milk Tea</span>
+                                    </div>
+                                    <div class="item-stock">
+                                        <span class="stock-count">20</span>
+                                        <span class="stock-unit">pcs</span>
+                                    </div>
+                                </div>
+                                <div class="inventory-item">
+                                    <div class="item-info">
+                                        <span class="item-name">Cheesecake</span>
+                                        <span class="item-category">Milk Tea</span>
+                                    </div>
+                                    <div class="item-stock">
+                                        <span class="stock-count">20</span>
+                                        <span class="stock-unit">pcs</span>
+                                    </div>
+                                </div>
+                                <div class="inventory-item">
+                                    <div class="item-info">
+                                        <span class="item-name">Matcha</span>
+                                        <span class="item-category">Milk Tea</span>
+                                    </div>
+                                    <div class="item-stock">
+                                        <span class="stock-count">20</span>
+                                        <span class="stock-unit">pcs</span>
+                                    </div>
+                                </div>
+                                <div class="inventory-item">
+                                    <div class="item-info">
+                                        <span class="item-name">Chocolate</span>
+                                        <span class="item-category">Milk Tea</span>
+                                    </div>
+                                    <div class="item-stock">
+                                        <span class="stock-count">20</span>
+                                        <span class="stock-unit">pcs</span>
+                                    </div>
+                                </div>
+                                <div class="inventory-item">
+                                    <div class="item-info">
+                                        <span class="item-name">Red Velvet</span>
+                                        <span class="item-category">Milk Tea</span>
+                                    </div>
+                                    <div class="item-stock">
+                                        <span class="stock-count">20</span>
+                                        <span class="stock-unit">pcs</span>
+                                    </div>
+                                </div>
+                                <div class="inventory-item">
+                                    <div class="item-info">
+                                        <span class="item-name">Salted Caramel</span>
+                                        <span class="item-category">Milk Tea</span>
+                                    </div>
+                                    <div class="item-stock">
+                                        <span class="stock-count">20</span>
+                                        <span class="stock-unit">pcs</span>
+                                    </div>
+                                </div>
+                                <div class="inventory-item">
+                                    <div class="item-info">
+                                        <span class="item-name">Choco Kisses</span>
+                                        <span class="item-category">Milk Tea</span>
+                                    </div>
+                                    <div class="item-stock">
+                                        <span class="stock-count">20</span>
+                                        <span class="stock-unit">pcs</span>
+                                    </div>
+                                </div>
+                                <div class="inventory-item">
+                                    <div class="item-info">
+                                        <span class="item-name">Taro</span>
+                                        <span class="item-category">Milk Tea</span>
+                                    </div>
+                                    <div class="item-stock">
+                                        <span class="stock-count">20</span>
+                                        <span class="stock-unit">pcs</span>
+                                    </div>
+                                </div>
+                                <div class="inventory-item">
+                                    <div class="item-info">
+                                        <span class="item-name">Strawberry</span>
+                                        <span class="item-category">Milk Tea</span>
+                                    </div>
+                                    <div class="item-stock">
+                                        <span class="stock-count">20</span>
+                                        <span class="stock-unit">pcs</span>
+                                    </div>
+                                </div>
+                                <div class="inventory-item">
+                                    <div class="item-info">
+                                        <span class="item-name">Brusko</span>
+                                        <span class="item-category">Coffee</span>
+                                    </div>
+                                    <div class="item-stock">
+                                        <span class="stock-count">20</span>
+                                        <span class="stock-unit">pcs</span>
+                                    </div>
+                                </div>
+                                <div class="inventory-item">
+                                    <div class="item-info">
+                                        <span class="item-name">Mocha</span>
+                                        <span class="item-category">Coffee</span>
+                                    </div>
+                                    <div class="item-stock">
+                                        <span class="stock-count">20</span>
+                                        <span class="stock-unit">pcs</span>
+                                    </div>
+                                </div>
+                                <div class="inventory-item">
+                                    <div class="item-info">
+                                        <span class="item-name">Macchiato</span>
+                                        <span class="item-category">Coffee</span>
+                                    </div>
+                                    <div class="item-stock">
+                                        <span class="stock-count">20</span>
+                                        <span class="stock-unit">pcs</span>
+                                    </div>
+                                </div>
+                                <div class="inventory-item">
+                                    <div class="item-info">
+                                        <span class="item-name">Vanilla</span>
+                                        <span class="item-category">Coffee</span>
+                                    </div>
+                                    <div class="item-stock">
+                                        <span class="stock-count">20</span>
+                                        <span class="stock-unit">pcs</span>
+                                    </div>
+                                </div>
+                                <div class="inventory-item">
+                                    <div class="item-info">
+                                        <span class="item-name">Caramel</span>
+                                        <span class="item-category">Coffee</span>
+                                    </div>
+                                    <div class="item-stock">
+                                        <span class="stock-count">20</span>
+                                        <span class="stock-unit">pcs</span>
+                                    </div>
+                                </div>
+                                <div class="inventory-item">
+                                    <div class="item-info">
+                                        <span class="item-name">Fudge</span>
+                                        <span class="item-category">Coffee</span>
+                                    </div>
+                                    <div class="item-stock">
+                                        <span class="stock-count">20</span>
+                                        <span class="stock-unit">pcs</span>
+                                    </div>
+                                </div>
+                                <div class="inventory-item">
+                                    <div class="item-info">
+                                        <span class="item-name">Spanish Latte</span>
+                                        <span class="item-category">Coffee</span>
+                                    </div>
+                                    <div class="item-stock">
+                                        <span class="stock-count">20</span>
+                                        <span class="stock-unit">pcs</span>
+                                    </div>
+                                </div>
+                                <div class="inventory-item">
+                                    <div class="item-info">
+                                        <span class="item-name">Lychee</span>
+                                        <span class="item-category">Fruit Tea</span>
+                                    </div>
+                                    <div class="item-stock">
+                                        <span class="stock-count">20</span>
+                                        <span class="stock-unit">pcs</span>
+                                    </div>
+                                </div>
+                                <div class="inventory-item">
+                                    <div class="item-info">
+                                        <span class="item-name">Green Apple</span>
+                                        <span class="item-category">Fruit Tea</span>
+                                    </div>
+                                    <div class="item-stock">
+                                        <span class="stock-count">20</span>
+                                        <span class="stock-unit">pcs</span>
+                                    </div>
+                                </div>
+                                <div class="inventory-item">
+                                    <div class="item-info">
+                                        <span class="item-name">Blueberry</span>
+                                        <span class="item-category">Fruit Tea</span>
+                                    </div>
+                                    <div class="item-stock">
+                                        <span class="stock-count">20</span>
+                                        <span class="stock-unit">pcs</span>
+                                    </div>
+                                </div>
+                                <div class="inventory-item">
+                                    <div class="item-info">
+                                        <span class="item-name">Lemon</span>
+                                        <span class="item-category">Fruit Tea</span>
+                                    </div>
+                                    <div class="item-stock">
+                                        <span class="stock-count">20</span>
+                                        <span class="stock-unit">pcs</span>
+                                    </div>
+                                </div>
+                                <div class="inventory-item">
+                                    <div class="item-info">
+                                        <span class="item-name">Kiwi</span>
+                                        <span class="item-category">Fruit Tea</span>
+                                    </div>
+                                    <div class="item-stock">
+                                        <span class="stock-count">20</span>
+                                        <span class="stock-unit">pcs</span>
+                                    </div>
+                                </div>
+                                <div class="inventory-item">
+                                    <div class="item-info">
+                                        <span class="item-name">Mango</span>
+                                        <span class="item-category">Fruit Tea</span>
+                                    </div>
+                                    <div class="item-stock">
+                                        <span class="stock-count">20</span>
+                                        <span class="stock-unit">pcs</span>
+                                    </div>
+                                </div>
+                                <div class="inventory-item">
+                                    <div class="item-info">
+                                        <span class="item-name">Honey Peach</span>
+                                        <span class="item-category">Fruit Tea</span>
+                                    </div>
+                                    <div class="item-stock">
+                                        <span class="stock-count">20</span>
+                                        <span class="stock-unit">pcs</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="inventory-section">
+                            <h3 class="section-title">Supplies</h3>
+                            <div class="inventory-grid">
+                                <div class="inventory-item">
+                                    <div class="item-info">
+                                        <span class="item-name">Pearl</span>
+                                        <span class="item-category">Toppings</span>
+                                    </div>
+                                    <div class="item-stock">
+                                        <span class="stock-count">20</span>
+                                        <span class="stock-unit">pcs</span>
+                                    </div>
+                                </div>
+                                <div class="inventory-item">
+                                    <div class="item-info">
+                                        <span class="item-name">Crystal</span>
+                                        <span class="item-category">Toppings</span>
+                                    </div>
+                                    <div class="item-stock">
+                                        <span class="stock-count">20</span>
+                                        <span class="stock-unit">pcs</span>
+                                    </div>
+                                </div>
+                                <div class="inventory-item">
+                                    <div class="item-info">
+                                        <span class="item-name">Cream Cheese</span>
+                                        <span class="item-category">Toppings</span>
+                                    </div>
+                                    <div class="item-stock">
+                                        <span class="stock-count">20</span>
+                                        <span class="stock-unit">pcs</span>
+                                    </div>
+                                </div>
+                                <div class="inventory-item">
+                                    <div class="item-info">
+                                        <span class="item-name">Cream Puff</span>
+                                        <span class="item-category">Toppings</span>
+                                    </div>
+                                    <div class="item-stock">
+                                        <span class="stock-count">20</span>
+                                        <span class="stock-unit">pcs</span>
+                                    </div>
+                                </div>
+                                <div class="inventory-item">
+                                    <div class="item-info">
+                                        <span class="item-name">Crushed Oreo</span>
+                                        <span class="item-category">Toppings</span>
+                                    </div>
+                                    <div class="item-stock">
+                                        <span class="stock-count">20</span>
+                                        <span class="stock-unit">pcs</span>
+                                    </div>
+                                </div>
+                                <div class="inventory-item">
+                                    <div class="item-info">
+                                        <span class="item-name">Coffee Jelly</span>
+                                        <span class="item-category">Toppings</span>
+                                    </div>
+                                    <div class="item-stock">
+                                        <span class="stock-count">20</span>
+                                        <span class="stock-unit">pcs</span>
+                                    </div>
+                                </div>
+                                <div class="inventory-item">
+                                    <div class="item-info">
+                                        <span class="item-name">Whipped Cream</span>
+                                        <span class="item-category">Toppings</span>
+                                    </div>
+                                    <div class="item-stock">
+                                        <span class="stock-count">20</span>
+                                        <span class="stock-unit">pcs</span>
+                                    </div>
+                                </div>
+                                <div class="inventory-item">
+                                    <div class="item-info">
+                                        <span class="item-name">Cup Medio</span>
+                                        <span class="item-category">Supplies</span>
+                                    </div>
+                                    <div class="item-stock">
+                                        <span class="stock-count">20</span>
+                                        <span class="stock-unit">pcs</span>
+                                    </div>
+                                </div>
+                                <div class="inventory-item">
+                                    <div class="item-info">
+                                        <span class="item-name">Cup Grande</span>
+                                        <span class="item-category">Supplies</span>
+                                    </div>
+                                    <div class="item-stock">
+                                        <span class="stock-count">20</span>
+                                        <span class="stock-unit">pcs</span>
+                                    </div>
+                                </div>
+                                <div class="inventory-item">
+                                    <div class="item-info">
+                                        <span class="item-name">Straw</span>
+                                        <span class="item-category">Supplies</span>
+                                    </div>
+                                    <div class="item-stock">
+                                        <span class="stock-count">20</span>
+                                        <span class="stock-unit">pcs</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cart Section -->
+        <div class="cart-section expanded" id="cartSection">
+            <div class="cart-container">
+                <h2 class="cart-title">
+                    <i class="fas fa-shopping-cart"></i> Your Cart
+                </h2>
+                <div class="cart-items" id="cartItems">
+                    <div class="empty-cart">Your cart is empty</div>
+                </div>
+                <div class="cart-summary">
+                    <div class="cart-total">
+                        <span>Total:</span>
+                        <span class="total-price" id="totalPrice">₱0</span>
+                    </div>
+                    <div class="payment-section">
+                        <div class="payment-input-group">
+                            <label for="paymentAmount">Cash Received:</label>
+                            <input type="number" id="paymentAmount" placeholder="Enter amount" min="0" step="1">
+                        </div>
+                        <div class="change-display" id="changeDisplay">
+                            <span>Change: </span>
+                            <span class="change-amount" id="changeAmount">₱0</span>
+                        </div>
+                    </div>
+                    <button class="checkout-btn" id="checkoutBtn">Checkout</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Floating Cart Icon -->
+        <div class="floating-cart" id="floatingCart">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="cart-badge" id="cartBadge">0</span>
+        </div>
+    </div>
+
+    <!-- Logout Confirmation Modal -->
+    <div class="modal-overlay" id="logoutModal">
+        <div class="modal-container">
+            <div class="modal-header">
+                <i class="fas fa-sign-out-alt modal-icon"></i>
+                <h3 class="modal-title">Confirm Logout</h3>
+            </div>
+            <div class="modal-body">
+                <p class="modal-message">Are you sure you want to logout?</p>
+            </div>
+            <div class="modal-footer">
+                <button class="modal-btn cancel-btn" id="logoutNoBtn">No</button>
+                <button class="modal-btn confirm-btn" id="logoutYesBtn">Yes</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Checkout Modal -->
+    <div class="modal-overlay" id="checkoutModal">
+        <div class="modal-container">
+            <div class="modal-header">
+                <i class="fas fa-receipt modal-icon"></i>
+                <h3 class="modal-title">Confirm Checkout</h3>
+            </div>
+            <div class="modal-body">
+                <div class="order-summary" id="orderSummary">
+                    <!-- Order summary will be populated here -->
+                </div>
+                <div class="order-total">
+                    <span>Total Amount:</span>
+                    <span class="total-amount" id="totalAmount">₱0</span>
+                </div>
+                <div class="payment-info">
+                    <div class="payment-row">
+                        <span>Cash Received:</span>
+                        <span id="modalPaymentAmount">₱0</span>
+                    </div>
+                    <div class="payment-row change-row">
+                        <span>Change:</span>
+                        <span id="modalChangeAmount">₱0</span>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="modal-btn cancel-btn" id="cancelBtn">Cancel</button>
+                <button class="modal-btn confirm-btn" id="confirmBtn">Confirm Order</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div class="modal-overlay" id="successModal">
+        <div class="modal-container">
+            <div class="modal-header">
+                <i class="fas fa-check-circle modal-icon"></i>
+                <h3 class="modal-title">Order Successful</h3>
+            </div>
+            <div class="modal-body">
+                <p class="modal-message">Your order has been placed successfully!</p>
+                <p class="order-number">Order Number: <span id="orderNumber"></span></p>
+            </div>
+            <div class="modal-footer">
+                <button class="modal-btn" id="okBtn">OK</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Receipt Modal -->
+    <div class="modal-overlay" id="receiptModal">
+        <div class="modal-container receipt-container">
+            <div class="modal-header">
+                <i class="fas fa-receipt modal-icon"></i>
+                <h3 class="modal-title">Order Receipt</h3>
+            </div>
+            <div class="modal-body">
+                <div class="receipt-content" id="receiptContent">
+                    <!-- Receipt content will be populated here -->
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="modal-btn secondary-btn" id="printReceiptBtn">
+                    <i class="fas fa-print"></i> Print
+                </button>
+                <button class="modal-btn secondary-btn" id="downloadReceiptBtn">
+                    <i class="fas fa-download"></i> Download
+                </button>
+                <button class="modal-btn confirm-btn" id="orderAgainBtn">Order Again</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/homepage.js"></script>
+</body>
+</html>
